@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Digital Interactivo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Nuestro Menú</h1>
+        <p>Descubre nuestra selección especial del día.</p>
+    </header>
+
+    <main class="menu-container">
+        <div id="menu-grid" class="menu-grid" role="list" aria-label="Lista de platos">
+            <!-- Las tarjetas se inyectarán dinámicamente vía JavaScript -->
+        </div>
+    </main>
+
+    <!-- Modal (Ventana Emergente) -->
+    <div id="dish-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-overlay" tabindex="-1" data-close="true" aria-hidden="true"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Cerrar ventana de detalles" data-close="true">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img id="modal-image" src="" alt="" class="modal-image">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-title" class="modal-title"></h2>
+                    <p id="modal-price" class="modal-price"></p>
+                    <p id="modal-description" class="modal-description"></p>
+                    <div class="modal-ingredients">
+                        <h3>Ingredientes:</h3>
+                        <ul id="modal-ingredients-list" aria-label="Lista de ingredientes"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
