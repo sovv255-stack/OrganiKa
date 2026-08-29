@@ -417,8 +417,13 @@ body {
    AJUSTES ESPECÍFICOS PARA MÓVILES (SMARTPHONES)
    ========================================= */
 @media (max-width: 768px) {
+    body {
+        background-image: url('background-mobile.jpg');
+        background-position: center center;
+    }
+
     .header {
-        padding-top: 140px; /* Evitar que el menú baje demasiado en pantallas verticales pequeñas */
+        padding-top: 320px; /* Evitar que el menú tape el logo central del fondo móvil */
     }
     
     .header h1 {
